@@ -110,8 +110,50 @@ Investigating the hash even further will give us the special hex code.
 <br />
 <img src="https://imgur.com/WXcVzO4.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-<img src="https://imgur.com/oUqgt4j.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-
+<br />
+<img src="https://imgur.com/vr9qrS8.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Back on Splunk, creating a table to show the "src_ip" password using the "dest_ip" also using the "post"method on the url "/joomla/administrator/index.php" will display the first bruteforce password used.
+<br />
+<img src="https://imgur.com/LP1e6PL.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<img src="https://imgur.com/6aaz5hg.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Again creating a table to show the "src_ip" password, we narrow the events down to show the number of coldplay songs that have 6 digits that have been used as a password.
+<br />
+<img src="https://imgur.com/smygT11.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<img src="https://imgur.com/63Pe1jO.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Using these commands gives us a count of occurrences a password was used to authenticate.
+<br />
+<img src="https://imgur.com/LIxeGwm.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Based on answer to Q16
+<br />
+<img src="https://imgur.com/C2CipzP.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/owTVDPJ.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Using the transaction function, we can group the events where the password "batman" was used.
+<br />
+<img src="https://imgur.com/N5SnmqJ.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+We can see in the duration field the amount of seconds between the brute force password scan identified the correct password and the compromised login.
+<br />
+<img src="https://imgur.com/byN15aV.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/znRIWuG.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+A simple stats sum count search using both IPs and the joomla administrator index guves us the count of the unique passwords used in the brute force attack.
+<br />
+<img src="https://imgur.com/xskeEXW.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/xskeEXW.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
 
 Observe the wiped disk:  <br/>
 <img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
