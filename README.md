@@ -152,12 +152,95 @@ A simple stats sum count search using both IPs and the joomla administrator inde
 <img src="https://imgur.com/xskeEXW.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="https://imgur.com/xskeEXW.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/45umyPj.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Based on the number of events related to workstation “we8105desk”, it is safe to say 192.168.250.100 is most likely the IP address associated with host "we8105desk"
+<br />
+<img src="https://imgur.com/OjD79ev.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/8yeV0pw.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+A simple "cerber" search with Suricata as the source type will help us analyze which suricata signatures were alerted the fewest number of times. Upon further analysis of the "alert.signature_id" field, we can see that 2816783 was the signature ID value.
+<br />
+<img src="https://imgur.com/k2CzyIU.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<img src="https://imgur.com/kBhHQ9n.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/bcu4Dym.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/Itz4U9R.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+While investigating the Windowd log, I found a suspicious event in the command line log.
+<br />
+<img src="https://imgur.com/BVvlIPo.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/Zm81q4N.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Investigating the suspicious event, we used the "eval" command and the "len" function to count the length of characters.
+<br />
+<img src="https://imgur.com/zfG1KXh.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/syTAAlP.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Using this formula will show us the windows registry log and break it down to show us the registry entry value specific to USB devices.
+<br />
+<img src="https://imgur.com/sy6HF2W.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Upon investigating the "data" field, we can see that MIRANDA.PRI is the USB key.
+<br />
+<img src="https://imgur.com/Kgu8KFX.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/ck4DwVC.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+We need to investigate the IP address of the workstation to get the Destination IP of the file server.
+<br />
+<img src="https://imgur.com/x6xTlOj.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+It is likely the destination IP of the file server is 192.168.250.20.
+<br />
+<img src="https://imgur.com/ChIfUul.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/UmwBq4Y.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Using the formula we used in Q25 to analyze the vbs scripts, we can simply add the filename to find our answer in the Parent_Process_ID field
+<br />
+<img src="https://imgur.com/LZjpmUy.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/WSJQfjd.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/L5iHkJs.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Using Bob Smiths hostname, we can then query all text files within Bob Smiths directory.
+<br />
+<img src="https://imgur.com/eF4o50r.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/gcYDObg.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+We need to use a suspicious domain and in Question 25, we discovered “solidaritedeproximite.org” was indeed suspicious.
+<br />
+<img src="https://imgur.com/eEnhpL9.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Now we can investigate the "filename" field to find the file name.
+<br />
+<img src="https://imgur.com/Kg1ZAfI.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/FKgJhid.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://imgur.com/ZuYuD1k.png)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
 
 <!--
  ```diff
